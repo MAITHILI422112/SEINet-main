@@ -17,7 +17,7 @@ opt = parser.parse_args()
 dataset_path = './datasets/'
 
 model = SEINet()
-model.load_state_dict(torch.load('./models/SEINet_EfficientNetB7_ORSSD.pth'))
+model.load_state_dict(torch.load('/kaggle/input/seinet/pytorch/default/1/SEINet_VGG16_EORSSD.pth'))
 
 model.cuda()
 model.eval()
