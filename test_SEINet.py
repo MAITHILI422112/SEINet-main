@@ -17,12 +17,12 @@ opt = parser.parse_args()
 dataset_path = './datasets/'
 
 model = SEINet()
-model.load_state_dict(torch.load('/kaggle/input/seinet/pytorch/default/1/SEINet_VGG16_EORSSD.pth'))
+model.load_state_dict(torch.load('/kaggle/input/seinet/pytorch/default/2/SEINet_EfficientNetB7_EORSSD.pth'))
 
 model.cuda()
 model.eval()
 
-test_datasets = ['ORSSD']
+test_datasets = ['EORSSD']
 
 for dataset in test_datasets:
     save_path = './results/EfficientNetB7/' + dataset + '/'
